@@ -3,32 +3,32 @@
   "description": "Explore our collection of authentic parts for the 1940 Big Coupe. Each component is meticulously crafted to match original specifications, ensuring a perfect restoration.",
   "parts": [
     {
-      "image": "/imgs/big-coupe-1940/1940-center-section.webp",
+      "image": "../assets/imgs/big-coupe-1940/1940-center-section.webp",
       "name": "Center Section",
       "description": "1940 center section assembly"
     },
     {
-      "image": "/imgs/big-coupe-1940/1940-door-handles.webp",
+      "image": "../assets/imgs/big-coupe-1940/1940-door-handles.webp",
       "name": "Door Handles",
       "description": "Set of 1940 door handles"
     },
     {
-      "image": "/imgs/big-coupe-1940/1940-grill.webp",
+      "image": "../assets/imgs/big-coupe-1940/1940-grill.webp",
       "name": "Radiator Grille",
       "description": "1940 chrome radiator grille with mounting brackets"
     },
     {
-      "image": "/imgs/big-coupe-1940/1940-headlight-ring-and-lense.webp",
+      "image": "../assets/imgs/big-coupe-1940/1940-headlight-ring-and-lense.webp",
       "name": "Headlight Assembly",
       "description": "Complete headlight assembly with rings and lenses"
     },
     {
-      "image": "/imgs/big-coupe-1940/1940-quarter-panel.webp",
+      "image": "../assets/imgs/big-coupe-1940/1940-quarter-panel.webp",
       "name": "Quarter Panel",
       "description": "1940 quarter panel assembly"
     },
     {
-      "image": "/imgs/big-coupe-1940/1940-quarter-panel-2.webp",
+      "image": "../assets/imgs/big-coupe-1940/1940-quarter-panel-2.webp",
       "name": "Quarter Panel",
       "description": "1940 quarter panel assembly (alternate view)"
     }
