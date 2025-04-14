@@ -1,11 +1,144 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import ContactForm from '../components/ContactForm';
+import { Image } from 'astro:assets';
+
+// Import images
+import fordCoupe from '../../public/imgs/ford-coupe-1937.webp';
+// import restoration from '../../public/imgs/restoration.webp';
+// import customParts from '../../public/imgs/custom-parts.webp';
+
+const models = await getCollection('models');
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Kay's Kustom Metal Works">
+  {/* Hero Section */}
+  <section class="relative h-[calc(100vh_-_64px)] flex justify-center bg-gray-900 text-white">
+    <Image
+      src={fordCoupe}
+      alt="1937 Ford Coupe"
+      class="absolute inset-0 w-full h-full object-cover"
+      width={1920}
+      height={1080}
+    />
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 text-center mt-36">
+      <h1 class="text-5xl font-bold mb-4">Kay's Kustom Metal Works</h1>
+      <p class="text-xl mb-8">Custom metal fabrication and restoration</p>
+      <a href="#contact" class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  {/* Services Section */}
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <div class="h-48 mb-4">
+            <div class="w-full h-full bg-gray-200 rounded"></div>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Metal Fabrication</h3>
+          <p>Custom metal work for any project</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <div class="h-48 mb-4">
+            <div class="w-full h-full bg-gray-200 rounded"></div>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Restoration</h3>
+          <p>Bringing classic cars back to life</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <div class="h-48 mb-4">
+            <div class="w-full h-full bg-gray-200 rounded"></div>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Custom Parts</h3>
+          <p>Handcrafted parts for your vehicle</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Reviews Section */}
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400">★★★★★</div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            "The quality of the parts is exceptional. They fit perfectly and look amazing on my classic car."
+          </p>
+          <p class="font-semibold">- John D.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400">★★★★★</div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            "Kay's Kustom Metal Works has been my go-to for classic car parts. Their attention to detail is unmatched."
+          </p>
+          <p class="font-semibold">- Sarah M.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400">★★★★★</div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            "I've been restoring classic cars for years, and Kay's parts are the best I've found. Highly recommended!"
+          </p>
+          <p class="font-semibold">- Michael R.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Models Section */}
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Models</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {models.map((model) => (
+          <a href={`/${model.id}`} class="block bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors h-full flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">{model.data.title}</h3>
+            <p class="text-gray-600 mb-4 flex-grow">{model.data.description}</p>
+            <div class="grid grid-cols-2 gap-6">
+              {model.data.parts.slice(0, 2).map((part) => (
+                <div class="bg-white p-4 rounded flex flex-col">
+                  <div class="h-32 mb-2">
+                    <Image
+                      src={part.image}
+                      alt={part.name}
+                      class="w-full h-full object-cover rounded"
+                      width={300}
+                      height={200}
+                    />
+                  </div>
+                  <h4 class="font-medium">{part.name}</h4>
+                </div>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Contact Section */}
+  <section id="contact" class="py-16 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+      <div class="max-w-2xl mx-auto">
+        <ContactForm client:load />
+      </div>
+    </div>
+  </section>
 </Layout>

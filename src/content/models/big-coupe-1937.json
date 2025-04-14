@@ -1,0 +1,46 @@
+{
+  "title": "Big Coupe 1937 Parts",
+  "description": "Explore our collection of authentic parts for the 1937 Big Coupe. Each component is meticulously crafted to match original specifications, ensuring a perfect restoration.",
+  "parts": [
+    {
+      "image": "/public/imgs/big-coupe-1937/3-piece-tail-pan.webp",
+      "name": "Tail Pan",
+      "description": "3-piece tail pan assembly"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/body-mounts.webp",
+      "name": "Body Mounts",
+      "description": "Complete set of body mounts"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/door-catches.webp",
+      "name": "Door Catches",
+      "description": "Set of door catch mechanisms"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/door-dove-tail-kit.webp",
+      "name": "Door Dovetail Kit",
+      "description": "Complete door dovetail kit"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/door-inner-view.webp",
+      "name": "Door Inner View",
+      "description": "Interior door panel view"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/door-stoppers.webp",
+      "name": "Door Stoppers",
+      "description": "Set of door stopper mechanisms"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/doors.webp",
+      "name": "Doors",
+      "description": "Complete door assembly"
+    },
+    {
+      "image": "/public/imgs/big-coupe-1937/front-end.webp",
+      "name": "Front End Assembly",
+      "description": "Complete front end assembly with mounting hardware"
+    }
+  ]
+}
