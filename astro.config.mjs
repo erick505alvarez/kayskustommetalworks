@@ -12,5 +12,6 @@ export default defineConfig({
     },
   },
   site: "https://kayskustommetalworks.com",
-  base: "/",
+  // base: "/",
+  base: "/kayskustommetalworks",
 });
