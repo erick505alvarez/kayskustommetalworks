@@ -27,6 +27,15 @@ export async function getStaticPaths() {
 }
 
 const { title, description, parts } = Astro.props as Props;
+
+const project_base_path = import.meta.env.BASE_URL;
+
+// Update image paths to include the base path
+const updatedParts = parts.map((part) => ({
+  ...part,
+  image: `${project_base_path}${part.image}`,
+}));
+
 ---
 
 <Layout title={title}>
@@ -36,7 +45,7 @@ const { title, description, parts } = Astro.props as Props;
       <p class="text-lg text-gray-600 mb-12">{description}</p>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {parts.map((part) => (
+        {updatedParts.map((part) => (
           <ProductCard
             client:load
             image={part.image}

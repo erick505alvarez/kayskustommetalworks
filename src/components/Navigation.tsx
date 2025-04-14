@@ -4,6 +4,8 @@ interface NavigationProps {
   currentPath: string;
 }
 
+const project_base_path = import.meta.env.BASE_URL;
+
 export default function Navigation({ currentPath }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +18,7 @@ export default function Navigation({ currentPath }: NavigationProps) {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <a
-              href="/"
+              href={`${project_base_path}/`}
               className="text-2xl font-bold"
               aria-label="Kay's Kustom Metal Works - Home"
             >
@@ -32,21 +34,27 @@ export default function Navigation({ currentPath }: NavigationProps) {
               aria-label="Main menu"
             >
               <a
-                href="/"
+                href={`${project_base_path}/`}
                 className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-                aria-current={currentPath === "/" ? "page" : undefined}
+                aria-current={
+                  currentPath === project_base_path ? "page" : undefined
+                }
               >
                 Home
               </a>
               <a
-                href="/about"
+                href={`${project_base_path}/about`}
                 className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-                aria-current={currentPath === "/about" ? "page" : undefined}
+                aria-current={
+                  currentPath === `${project_base_path}/about`
+                    ? "page"
+                    : undefined
+                }
               >
                 About
               </a>
               <a
-                href="/#contact"
+                href={`${project_base_path}/#contact`}
                 className="ml-4 px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700"
               >
                 Get in Touch
@@ -108,21 +116,21 @@ export default function Navigation({ currentPath }: NavigationProps) {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a
-            href="/"
+            href={`${project_base_path}/`}
             className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"
             aria-current={currentPath === "/" ? "page" : undefined}
           >
             Home
           </a>
           <a
-            href="/about"
+            href={`${project_base_path}/about`}
             className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"
             aria-current={currentPath === "/about" ? "page" : undefined}
           >
             About
           </a>
           <a
-            href="/#contact"
+            href={`${project_base_path}/#contact`}
             className="block px-3 py-2 rounded-md text-base font-medium bg-red-600 text-white hover:bg-red-700"
           >
             Get in Touch
