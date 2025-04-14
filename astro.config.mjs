@@ -11,4 +11,6 @@ export default defineConfig({
       noExternal: ["@astrojs/tailwind"],
     },
   },
+  site: "https://kayskustommetalworks.com",
+  base: "/",
 });
