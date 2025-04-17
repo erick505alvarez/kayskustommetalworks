@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContactForm from '../components/ContactForm.astro';
+import Layout from '../../layouts/Layout.astro';
+import ContactForm from '../../components/ContactForm.astro';
 ---
 
 <Layout title="Contact Us - Kay's Kustom Metal Works">
@@ -11,26 +11,24 @@ import ContactForm from '../components/ContactForm.astro';
         <p class="text-xl text-gray-300">Get in touch with us for all your classic car part needs</p>
       </div>
 
-      <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto"> -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         <div>
           <div class="bg-gray-800 p-8 rounded-lg">
             <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
             <div class="space-y-4">
               <div>
                 <h3 class="text-lg font-medium mb-2">Phone</h3>
-                <p class="text-gray-300 mb-4">
+                <p class="text-gray-300">
                   <a href="tel:+19499033322" class="hover:text-red-500 transition-colors">
                     (949) 903-3322
                   </a>
                 </p>
-                <h3 class="text-lg font-medium mb-2">Email</h3>
-                <p class="text-gray-400" class="hover:text-white">kayskustommetalworks&#64;gmail&#46;com</p>
               </div>
-              <!-- <div>
+              <div>
                 <h3 class="text-lg font-medium mb-2">Hours</h3>
                 <p class="text-gray-300">Monday - Friday: 9:00 AM - 5:00 PM</p>
                 <p class="text-gray-300">Saturday - Sunday: Closed</p>
-              </div> -->
+              </div>
               <!-- <div>
                 <h3 class="text-lg font-medium mb-2">Location</h3>
                 <p class="text-gray-300">Orange County, CA</p>
@@ -39,13 +37,13 @@ import ContactForm from '../components/ContactForm.astro';
           </div>
         </div>
 
-        <!-- <div>
+        <div>
           <div class="bg-gray-800 p-8 rounded-lg">
             <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
             <ContactForm />
           </div>
-        </div> -->
-      <!-- </div> -->
+        </div>
+      </div>
     </div>
   </section>
 </Layout> 
