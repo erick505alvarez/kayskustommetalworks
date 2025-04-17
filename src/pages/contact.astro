@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout title="Contact Us - Kay's Kustom Metal Works">
@@ -40,7 +40,7 @@ import ContactForm from '../components/ContactForm';
         <div>
           <div class="bg-gray-800 p-8 rounded-lg">
             <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
-            <ContactForm client:load />
+            <ContactForm />
           </div>
         </div>
       </div>

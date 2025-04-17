@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const project_base_path = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Message Sent - Kay's Kustom Metal Works">
@@ -12,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
           Thank you for reaching out. We'll get back to you very soon.
         </p>
         <a
-          href="/"
+          href={project_base_path}
           class="inline-block bg-red-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-red-700 transition-colors text-sm sm:text-base"
         >
           Return to Home

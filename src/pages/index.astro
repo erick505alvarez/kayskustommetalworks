@@ -1,18 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-import ContactForm from '../components/ContactForm';
+import { getCollection, type InferEntrySchema, type RenderedContent } from 'astro:content';
 import { Image } from 'astro:assets';
+
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 // Import images
 import fordCoupe from '../assets/imgs/ford-coupe-1937.webp';
 
-const models = await getCollection('models');
-
 const project_base_path = import.meta.env.BASE_URL;
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Fetch all models from the 'models' collection
+const models = await getCollection('models');
+
+// dynamic import images
+// json file image paths need to start with "/src/..." to match the glob pattern requirement
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/imgs/**/*.{jpeg,jpg,png,gif,webp}"
+)
 ---
 
 <Layout title="Kay's Kustom Metal Works">
@@ -41,23 +46,14 @@ const project_base_path = import.meta.env.BASE_URL;
       <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-gray-100 p-6 rounded-lg">
-          <!-- <div class="h-48 mb-4">
-            <div class="w-full h-full bg-gray-200 rounded"></div>
-          </div> -->
           <h3 class="text-xl font-semibold mb-4">Metal Fabrication</h3>
           <p>Custom metal work for any project</p>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg">
-          <!-- <div class="h-48 mb-4">
-            <div class="w-full h-full bg-gray-200 rounded"></div>
-          </div> -->
           <h3 class="text-xl font-semibold mb-4">Restoration</h3>
           <p>Bringing classic cars back to life</p>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg">
-          <!-- <div class="h-48 mb-4">
-            <div class="w-full h-full bg-gray-200 rounded"></div>
-          </div> -->
           <h3 class="text-xl font-semibold mb-4">Custom Parts</h3>
           <p>Handcrafted parts for your vehicle</p>
         </div>
@@ -106,16 +102,20 @@ const project_base_path = import.meta.env.BASE_URL;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-12">Our Models</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {models.map((model) => (
-          <a href={`${project_base_path}/${model.id}`} class="bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors h-full flex flex-col">
+        {models.map((model) => {
+        const modelSlug = model.data.slug;
+        return (
+          <a href={`${project_base_path}/${modelSlug}`} class="bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors h-full flex flex-col">
             <h3 class="text-xl font-semibold mb-4">{model.data.title}</h3>
             <p class="text-gray-600 mb-4 flex-grow">{model.data.description}</p>
             <div class="grid grid-cols-2 gap-6">
-              {model.data.parts.slice(0, 2).map((part) => (
+              {model.data.parts.slice(0, 2).map((part) => {
+                if (!images[part.imagePath]) throw new Error(`"${part.imagePath}" does not exist in glob: "/src/assets/imgs/*.{jpeg,jpg,png,gif,webp}"`);
+                return (
                 <div class="bg-white p-4 rounded flex flex-col">
                   <div class="h-32 mb-2">
                     <Image
-                      src={part.image}
+                      src={part.imagePath}
                       alt={part.name}
                       class="w-full h-full object-cover rounded"
                       width={300}
@@ -124,10 +124,11 @@ const project_base_path = import.meta.env.BASE_URL;
                   </div>
                   <h4 class="font-medium">{part.name}</h4>
                 </div>
-              ))}
+              )})}
             </div>
           </a>
-        ))}
+        );
+      })}
       </div>
     </div>
   </section>
@@ -137,7 +138,7 @@ const project_base_path = import.meta.env.BASE_URL;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
       <div class="max-w-2xl mx-auto">
-        <ContactForm client:load />
+        <ContactForm />
       </div>
     </div>
   </section>

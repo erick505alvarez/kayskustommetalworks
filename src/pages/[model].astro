@@ -1,41 +1,23 @@
 ---
+// src/pages/[model].astro
+import type { GetStaticPaths } from "astro";
 import Layout from '../layouts/Layout.astro';
-import ProductCard from '../components/ProductCard';
-import { getCollection } from 'astro:content';
+import ProductCard from '../components/ProductCard.astro';
 
-interface Props {
-  title: string;
-  description: string;
-  parts: Array<{
-    image: string;
-    name: string;
-    description?: string;
-  }>;
-}
+import { getCollection } from "astro:content";
 
-interface Model {
-  id: string;
-  data: Props;
-}
-
-export async function getStaticPaths() {
+export const getStaticPaths =  ( async () => {
   const models = await getCollection('models');
-  return models.map((model: Model) => ({
-    params: { model: model.id },
-    props: model.data,
+  const paths = models.map(model => ({
+    params: { model: model.data.slug },
+    props: { model }
   }));
-}
+  return paths;
+}) satisfies GetStaticPaths;
 
-const { title, description, parts } = Astro.props as Props;
+const { title, description, parts } = Astro.props.model.data;
 
-const project_base_path = import.meta.env.BASE_URL;
-
-// Update image paths to include the base path
-const updatedParts = parts.map((part) => ({
-  ...part,
-  image: `${project_base_path}${part.image}`,
-}));
-
+// const project_base_path = import.meta.env.BASE_URL;
 ---
 
 <Layout title={title}>
@@ -43,12 +25,11 @@ const updatedParts = parts.map((part) => ({
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-4xl font-bold mb-6">{title}</h1>
       <p class="text-lg text-gray-600 mb-12">{description}</p>
-      
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {updatedParts.map((part) => (
+        {parts.map((part) => (
           <ProductCard
-            client:load
-            image={part.image}
+            imagePath={part.imagePath}
             name={part.name}
             description={part.description}
           />
@@ -56,4 +37,4 @@ const updatedParts = parts.map((part) => ({
       </div>
     </div>
   </section>
-</Layout> 
+</Layout>
