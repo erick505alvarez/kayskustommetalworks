@@ -6,7 +6,8 @@ import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
 
 // Import images
-import fordCoupe from '../assets/imgs/ford-coupe-1937.webp';
+// import fordCoupe from '../assets/imgs/ford-coupe-1937.webp';
+import carInShop from '../assets/imgs/car-in-shop.webp'
 
 const project_base_path = import.meta.env.BASE_URL;
 
@@ -24,19 +25,21 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   {/* Hero Section */}
   <section class="relative h-[calc(100vh_-_64px)] flex justify-center bg-gray-900 text-white">
     <Image
-      src={fordCoupe}
+      src={carInShop}
       alt="1937 Ford Coupe"
       class="absolute inset-0 w-full h-full object-cover"
       width={1920}
       height={1080}
     />
     <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative z-10 text-center mt-36">
-      <h1 class="text-5xl font-bold mb-4">Kay's Kustom Metal Works</h1>
-      <p class="text-xl mb-8">Custom metal fabrication and restoration</p>
-      <a href={`${project_base_path}/contact`} class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors">
-        Get in Touch
-      </a>
+    <div class="flex items-center justify-center">
+      <div class="relative z-10 text-center">
+        <h1 class="text-5xl font-bold mb-4">Kay's Kustom Metal Works</h1>
+        <p class="text-xl mb-8">Custom metal fabrication and restoration</p>
+        <a href={`${project_base_path}/contact`} class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors">
+          Get in Touch
+        </a>
+      </div>
     </div>
   </section>
 
