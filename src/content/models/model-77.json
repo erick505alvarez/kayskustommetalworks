@@ -4,77 +4,77 @@
   "description": "Discover our premium parts for the classic Model 77, crafted with precision and attention to detail. Each component is designed to meet the highest standards of quality and authenticity.",
   "parts": [
     {
-      "imagePath": "/src/assets/imgs/model-77/beltline-fitment.webp",
+      "imagePath": "model-77/beltline-fitment.webp",
       "name": "Beltline Fitment",
       "description": "Beltline fitment assembly"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/hood.webp",
+      "imagePath": "model-77/hood.webp",
       "name": "Hood Assembly",
       "description": "Complete hood assembly with mounting hardware"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/hood-open.webp",
+      "imagePath": "model-77/hood-open.webp",
       "name": "Hood Open View",
       "description": "Hood assembly open view"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/hood-side-vent-doors.webp",
+      "imagePath": "model-77/hood-side-vent-doors.webp",
       "name": "Hood Vent Doors",
       "description": "Set of hood side vent doors"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/car-trunk.webp",
+      "imagePath": "model-77/car-trunk.webp",
       "name": "Model 77 Overview",
       "description": "Complete model overview"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/LH-front-fender.webp",
+      "imagePath": "model-77/LH-front-fender.webp",
       "name": "Front Fender",
       "description": "Left front fender with mounting hardware"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/LH-front-fender-inner-side-view.webp",
+      "imagePath": "model-77/LH-front-fender-inner-side-view.webp",
       "name": "Front Fender Inner View",
       "description": "Left front fender inner side view"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/quarter-panels.webp",
+      "imagePath": "model-77/quarter-panels.webp",
       "name": "Quarter Panels",
       "description": "Set of quarter panels with original pattern"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/rear-window-panel.webp",
+      "imagePath": "model-77/rear-window-panel.webp",
       "name": "Rear Window Panel",
       "description": "Rear window panel assembly"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/RH-front-fender.webp",
+      "imagePath": "model-77/RH-front-fender.webp",
       "name": "Front Fender",
       "description": "Right front fender with mounting hardware"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/RH-front-fender-view.webp",
+      "imagePath": "model-77/RH-front-fender-view.webp",
       "name": "Front Fender View",
       "description": "Right front fender detailed view"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/sedan-delivery-belt-line-moldings.webp",
+      "imagePath": "model-77/sedan-delivery-belt-line-moldings.webp",
       "name": "Belt Line Moldings",
       "description": "Sedan delivery belt line moldings set"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/side-window.webp",
+      "imagePath": "model-77/side-window.webp",
       "name": "Side Window",
       "description": "Side window assembly"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/spare-wheel-panel.webp",
+      "imagePath": "model-77/spare-wheel-panel.webp",
       "name": "Spare Wheel Panel",
       "description": "Spare wheel panel assembly"
     },
     {
-      "imagePath": "/src/assets/imgs/model-77/trunk-lid-skin.webp",
+      "imagePath": "model-77/trunk-lid-skin.webp",
       "name": "Trunk Lid Skin",
       "description": "Trunk lid skin assembly"
     }

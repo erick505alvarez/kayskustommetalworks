@@ -103,32 +103,33 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <h2 class="text-3xl font-bold text-center mb-12">Our Models</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {models.map((model) => {
-        const modelSlug = model.data.slug;
-        return (
-          <a href={`${project_base_path}/${modelSlug}`} class="bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors h-full flex flex-col">
-            <h3 class="text-xl font-semibold mb-4">{model.data.title}</h3>
-            <p class="text-gray-600 mb-4 flex-grow">{model.data.description}</p>
-            <div class="grid grid-cols-2 gap-6">
-              {model.data.parts.slice(0, 2).map((part) => {
-                if (!images[part.imagePath]) throw new Error(`"${part.imagePath}" does not exist in glob: "/src/assets/imgs/*.{jpeg,jpg,png,gif,webp}"`);
-                return (
-                <div class="bg-white p-4 rounded flex flex-col">
-                  <div class="h-32 mb-2">
-                    <Image
-                      src={part.imagePath}
-                      alt={part.name}
-                      class="w-full h-full object-cover rounded"
-                      width={300}
-                      height={200}
-                    />
+          const modelSlug = model.data.slug;
+          return (
+            <a href={`${project_base_path}/${modelSlug}`} class="bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors h-full flex flex-col">
+              <h3 class="text-xl font-semibold mb-4">{model.data.title}</h3>
+              <p class="text-gray-600 mb-4 flex-grow">{model.data.description}</p>
+              <div class="grid grid-cols-2 gap-6">
+                {model.data.parts.slice(0, 2).map((part) => {
+                  const fullImagePath = `/src/assets/imgs/${part.imagePath}`;
+                  if (!images[fullImagePath]) throw new Error(`"${fullImagePath}" does not exist in glob: "/src/assets/imgs/**/*.{jpeg,jpg,png,gif,webp}"`);
+                  return (
+                  <div class="bg-white p-4 rounded flex flex-col">
+                    <div class="h-32 mb-2">
+                      <Image
+                        src={images[fullImagePath]()}
+                        alt={part.name}
+                        class="w-full h-full object-cover rounded"
+                        width={300}
+                        height={200}
+                      />
+                    </div>
+                    <h4 class="font-medium">{part.name}</h4>
                   </div>
-                  <h4 class="font-medium">{part.name}</h4>
-                </div>
-              )})}
-            </div>
-          </a>
-        );
-      })}
+                )})}
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>

@@ -134,27 +134,8 @@ console.log('project_base_path:', project_base_path);
       return;
     }
 
+    // Format the data for submission
     form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      console.log('entered...')
-
-      // Get form data
-      const formElement = event.target;
-      const formData = new FormData(formElement);
-
-      // Validate required fields
-      const firstName = formData.get("firstName");
-      const email = formData.get("email");
-      const message = formData.get("message");
-
-      if (!firstName || !email || !message) {
-        alert("Please fill in all required fields.");
-        return;
-      }
-
-      // Format the data for submission
-      form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const formElement = event.target;
@@ -183,10 +164,10 @@ console.log('project_base_path:', project_base_path);
         console.log('trying...')
         const response = await fetch(FORMSUBMIT_URL, {
           method: "POST",
-          // headers: {
-          //   "Content-Type": "application/x-www-form-urlencoded"
-          // },
-          body: new URLSearchParams(formattedData).toString(),
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: JSON.stringify(formattedData),
         });
 
         console.log('submitted');
@@ -204,7 +185,6 @@ console.log('project_base_path:', project_base_path);
         console.error(error);
         alert("There was a network error submitting the form. Please try again.");
       }
-    });
     });
   });
 </script>

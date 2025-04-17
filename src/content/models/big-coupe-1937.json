@@ -4,42 +4,42 @@
   "description": "Explore our collection of authentic parts for the 1937 Big Coupe. Each component is meticulously crafted to match original specifications, ensuring a perfect restoration.",
   "parts": [
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/3-piece-tail-pan.webp",
+      "imagePath": "big-coupe-1937/3-piece-tail-pan.webp",
       "name": "Tail Pan",
       "description": "3-piece tail pan assembly"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/body-mounts.webp",
+      "imagePath": "big-coupe-1937/body-mounts.webp",
       "name": "Body Mounts",
       "description": "Complete set of body mounts"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/door-catches.webp",
+      "imagePath": "big-coupe-1937/door-catches.webp",
       "name": "Door Catches",
       "description": "Set of door catch mechanisms"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/door-dove-tail-kit.webp",
+      "imagePath": "big-coupe-1937/door-dove-tail-kit.webp",
       "name": "Door Dovetail Kit",
       "description": "Complete door dovetail kit"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/door-inner-view.webp",
+      "imagePath": "big-coupe-1937/door-inner-view.webp",
       "name": "Door Inner View",
       "description": "Interior door panel view"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/door-stoppers.webp",
+      "imagePath": "big-coupe-1937/door-stoppers.webp",
       "name": "Door Stoppers",
       "description": "Set of door stopper mechanisms"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/doors.webp",
+      "imagePath": "big-coupe-1937/doors.webp",
       "name": "Doors",
       "description": "Complete door assembly"
     },
     {
-      "imagePath": "/src/assets/imgs/big-coupe-1937/front-end.webp",
+      "imagePath": "big-coupe-1937/front-end.webp",
       "name": "Front End Assembly",
       "description": "Complete front end assembly with mounting hardware"
     }
