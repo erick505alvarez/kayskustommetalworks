@@ -117,13 +117,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {
           models.map((model) => {
-            const modelSlug = model.data.slug;
+            // Model Card
             return (
               <a
-                href={`${project_base_path}/${modelSlug}`}
+                href={`${project_base_path}/${model.data.slug}`}
                 class="bg-white p-6 rounded-lg hover:bg-gray-300 transition-colors h-full flex flex-col"
               >
-                <h3 class="text-xl font-semibold mb-4">{model.data.title}</h3>
+                <h3 class="text-xl font-semibold mb-1">{model.data.title}</h3>
+                <div class="flex mb-4">
+                  <div class="flex-shrink-2 rounded-full bg-gray-900 text-white px-4 -translate-x-[.2em]">
+                    {model.data.category}
+                  </div>
+                </div>
                 <p class="text-gray-600 mb-4 flex-grow">
                   {model.data.description}
                 </p>

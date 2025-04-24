@@ -1,0 +1,83 @@
+{
+  "title": "Big Coupe 1977",
+  "slug": "big-coupe-1977",
+  "description": "Discover our premium parts for the classic Big Coupe 1977, crafted with precision and attention to detail. Each component is designed to meet the highest standards of quality and authenticity.",
+  "category": "Big Coupe",
+  "parts": [
+    {
+      "imagePath": "models/big-coupe-1977/beltline-fitment.webp",
+      "name": "Beltline Fitment",
+      "description": "Beltline fitment assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/hood.webp",
+      "name": "Hood Assembly",
+      "description": "Complete hood assembly with mounting hardware"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/hood-open.webp",
+      "name": "Hood Open View",
+      "description": "Hood assembly open view"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/hood-side-vent-doors.webp",
+      "name": "Hood Vent Doors",
+      "description": "Set of hood side vent doors"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/car-trunk.webp",
+      "name": "Model 77 Overview",
+      "description": "Complete model overview"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/LH-front-fender.webp",
+      "name": "Front Fender",
+      "description": "Left front fender with mounting hardware"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/LH-front-fender-inner-side-view.webp",
+      "name": "Front Fender Inner View",
+      "description": "Left front fender inner side view"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/quarter-panels.webp",
+      "name": "Quarter Panels",
+      "description": "Set of quarter panels with original pattern"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/rear-window-panel.webp",
+      "name": "Rear Window Panel",
+      "description": "Rear window panel assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/RH-front-fender.webp",
+      "name": "Front Fender",
+      "description": "Right front fender with mounting hardware"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/RH-front-fender-view.webp",
+      "name": "Front Fender View",
+      "description": "Right front fender detailed view"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/sedan-delivery-belt-line-moldings.webp",
+      "name": "Belt Line Moldings",
+      "description": "Sedan delivery belt line moldings set"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/side-window.webp",
+      "name": "Side Window",
+      "description": "Side window assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/spare-wheel-panel.webp",
+      "name": "Spare Wheel Panel",
+      "description": "Spare wheel panel assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1977/trunk-lid-skin.webp",
+      "name": "Trunk Lid Skin",
+      "description": "Trunk lid skin assembly"
+    }
+  ]
+}

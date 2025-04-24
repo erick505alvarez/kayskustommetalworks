@@ -1,0 +1,128 @@
+{
+  "title": "Big Coupe 1937-1941",
+  "slug": "big-coupe-1937-1941",
+  "description": "Explore our collection of authentic parts for the 1937-1941 Big Coupe. Each component is meticulously crafted to match original specifications, ensuring a perfect restoration.",
+  "category": "Big Coupe",
+  "parts": [
+    {
+      "imagePath": "models/big-coupe-1937-1941/3-piece-tail-pan.webp",
+      "name": "Tail Pan",
+      "description": "3-piece tail pan assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/body-mounts.webp",
+      "name": "Body Mounts",
+      "description": "Complete set of body mounts"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/door-catches.webp",
+      "name": "Door Catches",
+      "description": "Set of door catch mechanisms"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/door-dove-tail-kit.webp",
+      "name": "Door Dovetail Kit",
+      "description": "Complete door dovetail kit"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/door-inner-view.webp",
+      "name": "Door Inner View",
+      "description": "Interior door panel view"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/door-stoppers.webp",
+      "name": "Door Stoppers",
+      "description": "Set of door stopper mechanisms"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/doors.webp",
+      "name": "Doors",
+      "description": "Complete door assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/front-end.webp",
+      "name": "Front End Assembly",
+      "description": "Complete front end assembly with mounting hardware"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/1940-center-section.webp",
+      "name": "Center Section",
+      "description": "1940 center section assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/1940-door-handles.webp",
+      "name": "Door Handles",
+      "description": "Set of 1940 door handles"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/1940-grill.webp",
+      "name": "Radiator Grille",
+      "description": "1940 chrome radiator grille with mounting brackets"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/1940-headlight-ring-and-lense.webp",
+      "name": "Headlight Assembly",
+      "description": "Complete headlight assembly with rings and lenses"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/1940-quarter-panel.webp",
+      "name": "Quarter Panel",
+      "description": "1940 quarter panel assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/1940-quarter-panel-2.webp",
+      "name": "Quarter Panel",
+      "description": "1940 quarter panel assembly (alternate view)"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/rh-rear-fender.webp",
+      "name": "Rear Fender",
+      "description": "Right rear fender with mounting hardware"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/rocker-panels.webp",
+      "name": "Rocker Panels",
+      "description": "Complete set of rocker panels"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/sail-panel.webp",
+      "name": "Sail Panel",
+      "description": "Sail panel assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/screen-pillars.webp",
+      "name": "Screen Pillars",
+      "description": "Set of screen pillars"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/tail-panel.webp",
+      "name": "Tail Panel",
+      "description": "Complete tail panel assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/trunk-handle.webp",
+      "name": "Trunk Handle",
+      "description": "Trunk handle assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/trunk-hing.webp",
+      "name": "Trunk Hinge",
+      "description": "Complete trunk hinge assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/trunk-latch.webp",
+      "name": "Trunk Latch",
+      "description": "Complete trunk latch assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/trunk-lid-inner.webp",
+      "name": "Trunk Lid Inner",
+      "description": "Inner trunk lid assembly"
+    },
+    {
+      "imagePath": "models/big-coupe-1937-1941/trunk-lid-outer.webp",
+      "name": "Trunk Lid Outer",
+      "description": "Outer trunk lid assembly"
+    }
+  ]
+}

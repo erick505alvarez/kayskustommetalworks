@@ -1,0 +1,28 @@
+{
+  "title": "Dino 246 GTS",
+  "slug": "dino-246-gts",
+  "description": "Discover our premium parts for the classic Dino 246 GTS, crafted with precision and attention to detail. Each component is designed to meet the highest standards of quality and authenticity.",
+  "category": "European Classics",
+  "parts": [
+    {
+      "imagePath": "models/european-classics/dino-246-gts/IMG_0473.webp",
+      "name": "Front End Assembly",
+      "description": "Detailed view of the front end assembly, including the grille, headlights, and bumper."
+    },
+    {
+      "imagePath": "models/european-classics/dino-246-gts/IMG_0474.webp",
+      "name": "Side Profile View",
+      "description": "Complete side profile view of the Dino 246 GTS, showcasing the sleek body lines and aerodynamic design."
+    },
+    {
+      "imagePath": "models/european-classics/dino-246-gts/IMG_0475.webp",
+      "name": "Rear End Assembly",
+      "description": "Detailed view of the rear end assembly, including the taillights, trunk lid, and exhaust system."
+    },
+    {
+      "imagePath": "models/european-classics/dino-246-gts/IMG_0476.webp",
+      "name": "Interior Dashboard View",
+      "description": "Close-up view of the interior dashboard, highlighting the classic instrument cluster and controls."
+    }
+  ]
+}
