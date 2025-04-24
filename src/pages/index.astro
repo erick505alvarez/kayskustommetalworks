@@ -1,4 +1,6 @@
 ---
+// /src/pages/index.astro
+
 import {
   getCollection,
   type InferEntrySchema,
@@ -7,11 +9,9 @@ import {
 import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
-import ContactForm from "../components/ContactForm.astro";
 
 // Import images
-// import fordCoupe from '../assets/imgs/ford-coupe-1937.webp';
-import carInShop from "../assets/imgs/car-in-shop.webp";
+import heroImage from "../assets/imgs/branding/hero-img.webp";
 
 const project_base_path = import.meta.env.BASE_URL;
 
@@ -29,23 +29,23 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   {/* Hero Section */}
   <!-- <section class="relative h-[calc(100vh_-_84px)] flex justify-center bg-gray-900 text-white"> -->
   <section
-    class="relative min-h-[80vh] flex justify-center bg-gray-900 text-white"
+    class="relative min-h-[75vh] flex justify-center bg-gray-900 text-white"
   >
     <Image
-      src={carInShop}
+      src={heroImage}
       alt="Car in shop"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover object-top"
       width={1920}
       height={1080}
     />
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="flex items-center justify-center">
+    <div class="OVERLAY absolute inset-0 bg-black opacity-20"></div>
+    <div class="flex items-end justify-center py-[6rem]">
       <div class="relative z-10 text-center">
-        <h1 class="text-5xl font-bold mb-4">Kay's Kustom Metal Works</h1>
-        <p class="text-xl mb-8">Custom metal fabrication and restoration</p>
+        <!-- <h1 class="text-5xl font-bold mb-4">Kay's Kustom Metal Works</h1> -->
+        <!-- <p class="text-xl mb-8">Custom metal fabrication and restoration</p> -->
         <a
           href={`${project_base_path}/contact`}
-          class="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors"
+          class="bg-red-600 text-white px-6 py-4 rounded-md hover:bg-red-700 transition-colors"
         >
           Get in Touch
         </a>
@@ -54,7 +54,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   </section>
 
   {/* Services Section */}
-  <section class="py-12 bg-white">
+  <section class="SERVICES-SECTION py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
