@@ -44,7 +44,7 @@ const { currentPath } = Astro.props;
           aria-label="Main menu"
         >
           <a
-            href={`${project_base_path}/`}
+            href={`${project_base_path}`}
             class={`px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 ${
               currentPath === project_base_path ? "bg-gray-700" : ""
             }`}
@@ -55,7 +55,7 @@ const { currentPath } = Astro.props;
             Home
           </a>
           <a
-            href={`${project_base_path}/about`}
+            href={`${project_base_path}about`}
             class={`px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 ${
               currentPath === `${project_base_path}/about` ? "bg-gray-700" : ""
             }`}
@@ -66,7 +66,7 @@ const { currentPath } = Astro.props;
             About
           </a>
           <a
-            href={`${project_base_path}/contact`}
+            href={`${project_base_path}contact`}
             class="ml-4 px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700"
           >
             Get in Touch

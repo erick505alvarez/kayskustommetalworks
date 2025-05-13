@@ -44,7 +44,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         <!-- <h1 class="text-5xl font-bold mb-4">Kay's Kustom Metal Works</h1> -->
         <!-- <p class="text-xl mb-8">Custom metal fabrication and restoration</p> -->
         <a
-          href={`${project_base_path}/contact`}
+          href={`${project_base_path}contact`}
           class="bg-red-600 text-white px-6 py-4 rounded-md hover:bg-red-700 transition-colors"
         >
           Get in Touch
@@ -120,7 +120,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             // Model Card
             return (
               <a
-                href={`${project_base_path}/${model.data.slug}`}
+                href={`${project_base_path}${model.data.slug}`}
                 class="bg-white p-6 rounded-lg hover:bg-gray-300 transition-colors h-full flex flex-col"
               >
                 <h3 class="text-xl font-semibold mb-1">{model.data.title}</h3>
