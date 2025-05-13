@@ -5,19 +5,24 @@
   "category": "European Classics",
   "parts": [
     {
-      "imagePath": "models/european-classics/lamborghini-miura/IMG_3638.webp",
+      "imagePath": "models/european-classics/lamborghini-miura/front-view.webp",
       "name": "Front End Assembly",
       "description": "Detailed view of the front end assembly, including the grille, headlights, and bumper."
     },
     {
-      "imagePath": "models/european-classics/lamborghini-miura/IMG_3639.webp",
+      "imagePath": "models/european-classics/lamborghini-miura/back-view.webp",
       "name": "Rear End Assembly",
       "description": "Detailed view of the rear end assembly, showcasing the taillights, trunk lid, and exhaust system."
     },
     {
-      "imagePath": "models/european-classics/lamborghini-miura/IMG_3640.webp",
+      "imagePath": "models/european-classics/lamborghini-miura/side-view.webp",
       "name": "Interior Dashboard View",
       "description": "Close-up view of the interior dashboard, highlighting the classic instrument cluster and controls."
+    },
+    {
+      "imagePath": "models/european-classics/lamborghini-miura/top-view.webp",
+      "name": "Interior Dashboard View",
+      "description": "Close-up view of the overhead, highlighting the classic design."
     }
   ]
 }

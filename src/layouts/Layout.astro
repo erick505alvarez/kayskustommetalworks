@@ -23,6 +23,7 @@ const project_base_path = import.meta.env.BASE_URL;
 		<meta name="description" content={description} />
 		<meta name="keywords" content="metal fabrication, classic cars, car restoration, custom metal work, automotive parts" />
 		<meta name="author" content="Kay's Kustom Metal Works" />
+		<!-- open graph assets -->
 		<meta name="og:image" content="/imgs/ford-coupe-1937.webp" />
 		<meta property="og:title" content={`${title} | Kay's Kustom Metal Works`} />
 		<meta property="og:description" content={description} />
@@ -31,7 +32,7 @@ const project_base_path = import.meta.env.BASE_URL;
 		<meta name="twitter:card" content="summary_large_image" />
 		<script type="application/ld+json">
 			{JSON.stringify({
-				"@context": "https://schema.org",
+				"@context": "https://kayskustommetalworks.com",
 				"@type": "AutoRepair",
 				"name": "Kay's Kustom Metal Works",
 				"description": description,
