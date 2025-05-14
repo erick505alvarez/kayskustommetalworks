@@ -57,9 +57,9 @@ const { currentPath } = Astro.props;
           <a
             href={`${project_base_path}about`}
             class={`px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 ${
-              currentPath === `${project_base_path}/about` ? "bg-gray-700" : ""
+              currentPath === `${project_base_path}about` ? "bg-gray-700" : ""
             }`}
-            aria-current={currentPath === `${project_base_path}/about`
+            aria-current={currentPath === `${project_base_path}about`
               ? "page"
               : undefined}
           >
@@ -113,7 +113,7 @@ const { currentPath } = Astro.props;
   >
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <a
-        href={`${project_base_path}/`}
+        href={`${project_base_path}`}
         class={`block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 ${
           currentPath === project_base_path ? "bg-gray-700" : ""
         }`}
@@ -122,18 +122,18 @@ const { currentPath } = Astro.props;
         Home
       </a>
       <a
-        href={`${project_base_path}/about`}
+        href={`${project_base_path}about`}
         class={`block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 ${
-          currentPath === `${project_base_path}/about` ? "bg-gray-700" : ""
+          currentPath === `${project_base_path}about` ? "bg-gray-700" : ""
         }`}
-        aria-current={currentPath === `${project_base_path}/about`
+        aria-current={currentPath === `${project_base_path}about`
           ? "page"
           : undefined}
       >
         About
       </a>
       <a
-        href={`${project_base_path}/contact`}
+        href={`${project_base_path}contact`}
         class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-red-700"
       >
         Get in Touch
