@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   site: "https://kayskustommetalworks.com",
-  base: "", // astro default -- converts to '/'
+  base: "/", // astro default -- converts to '/'
   // base: "/kayskustommetalworks/", // if hosted
 });
